@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
-    <header id="contacto" class="seccion">
+    <header id="contacto" class="super-seccion">
         <h1>Oliver Barra Acevedo <br> "Cuackzoide"</h1>
         <p>Desarrollador Web Full-Stack en formación</p>
         <nav class="datos-contacto">
@@ -18,7 +18,7 @@
     </header>
 
     <main class="contenedor-cv">
-        <section id="perfil-profesional" class="seccion">
+        <section id="perfil-profesional" class="super-seccion">
             <h2>📄 Perfil Profesional</h2>
             <p>Profesional en transición al desarrollo web con la especialización “Full-Stack JavaScript”,
             destacando siempre un fuerte pensamiento crítico, lógico y orientado a resultados. 
@@ -28,8 +28,10 @@
         </section>
         
         <section id="proyectos" class="seccion">
-            <h2>🚀 Proyectos</h2>
-            <article class="proyecto">
+            <div class="proyecto card">
+                <h2>🚀 Proyectos</h2>
+            </div>
+            <article class="proyecto card">
                 <h3>Desafío de lógica "Mastermind”</h3>
                 <p>
                     La fase inicial centrada en la lógica, diseñando el algoritmo de código secreto (función random de Python) y creando funciones de 
@@ -46,7 +48,7 @@
                     <a href="https://cuackzoide.github.io/Mastermind" target="_blank">Github Pages</a>
                 </p>
             </article>
-            <article class="proyecto">
+            <article class="proyecto card">
                 <h3>E-commerce B2C</h3>
                 <p>
                     Plataforma sobre Hosting dedicado, utilizando WordPress como CMS y WooCommerce para la funcionalidad de compras. 
@@ -64,9 +66,12 @@
             </article>
         </section>
 
-        <section id="habilidades" class="dos-columnas">
-            <div id="habilidades-tecnicas" class="seccion">
-                <h2>🛠️ Habilidades Técnicas</h2>
+        <section id="habilidades" class="seccion">
+            <div class="habilidad card">
+                <h2>Habilidades 🛠️</h2>
+            </div>
+            <div id="habilidades-tecnicas" class="habilidad card">
+                <h2>⚙️ Habilidades Técnicas</h2>
                 <dl id="tecnicas">
                     <dt>Análisis de datos:</dt>
                     <dd>Grandes volúmenes de datos con precisión y eficiencia.</dd>
@@ -88,9 +93,9 @@
                 </dl>
             </div>
 
-            <div id="habilidades-blandas" class="seccion">
+            <div id="habilidades-blandas" class="habilidad card">
                 <h2>💡 Habilidades Blandas</h2>
-                <dl>
+                <dl id="blandas">
                     <dt>Adaptabilidad:</dt>
                     <dd>Aprendizaje continuo y ágil.</dd>
 
@@ -108,10 +113,12 @@
                 </dl>
             </div>
         </section>
-        <section id="experiencia">
+        <section id="experiencia" class="super-seccion">
             <article id="rol-relevante" class="seccion">
-                <h2>💼 Experiencia Laboral</h2>
-                <div>
+                <div class="title card">
+                    <h2>💼 Experiencia Laboral</h2>
+                </div>
+                <div class="card">
                     <h3>
                         GEA INTERNACIONAL — Analista de Datos + Automatización.
                     </h3>
@@ -127,7 +134,7 @@
                     </p>
                 </div>
 
-                <div>
+                <div class="card">
                     <h3>
                         GEA INTERNACIONAL — Ejecutivo de atención comercial + Retención.
                     </h3>
@@ -140,7 +147,7 @@
                         previniendo el error humano y mejorando significativamente la eficiencia del equipo de retención.
                     </p>
                 </div>
-                <div>
+                <div class="card">
                     <h3>
                         KOE Chile — Ejecutivo de televentas + Matrículas.
                     </h3>
@@ -149,7 +156,7 @@
                         la captación y el cierre de matrículas de nuevos alumnos.
                     </p>
                 </div>
-                <div>
+                <div class="card">
                     <h3>
                         Mailinko y cia. LTDA — Analista contable + Administrativo.
                     </h3>
@@ -163,8 +170,10 @@
             </article>
 
             <article id="otros-roles" class="seccion">
-                <h3>EXPERIENCIAS PREVIAS</h3>
-                 <div>
+                <div class="title card">
+                    <h3>EXPERIENCIAS PREVIAS</h3>
+                </div>
+                 <div class="card">
                     <h4>
                        Cencosud — Servicio al cliente.
                     </h4>
@@ -172,7 +181,7 @@
                        Resolución de conflictos, manejo de sistemas transaccionales (devoluciones y créditos).
                     </p>
                 </div>
-                <div>
+                <div class="card">
                     <h4>
                         Pacific Blue — Operario de producción.
                     </h4>
@@ -180,7 +189,7 @@
                        Adherencia a protocolos logísticos de producción y calidad.
                     </p>
                 </div>
-                <div>
+                <div class="card">
                     <h4>
                         A Pedir De Boca — Montaje y garzón.
                     </h4>
@@ -188,7 +197,7 @@
                        Apoyo logístico, en la planificación y ejecución de eventos con orientación al servicio.
                     </p>
                 </div>
-                <div>
+                <div class="card">
                     <h4>
                         Yogurt Life — Cajero.
                     </h4>
@@ -196,7 +205,7 @@
                        Responsabilidad transaccional en el manejo y cierre de caja, demostrando rigor matemático y financiero.
                     </p>
                 </div>
-                <div>
+                <div class="card">
                     <h4>
                         OZEFE Ingeniería — Asistente de montaje.
                     </h4>
@@ -207,10 +216,12 @@
             </article>
         </section>
 
-        <section id="formacion" >
+        <section id="formacion" class="super-seccion">
             <div id="educacion" class="seccion">
-                <h2>🎓 Educación</h2>
-                <div>
+                <div class="title card">    
+                    <h2>🎓 Educación</h2>
+                </div>
+                <div class="card">
                     <h3>
                         MindHub — Desarrollo web (Técnico)
                     </h3>
@@ -222,21 +233,17 @@
                         CURSO: Desarrollo de Aplicaciones Full-Stack JavaScript.
                     </p>
                 </div>
-                <div>
+                <div class="card">
                     <h3>
                         Universidad San Sebastián — Medicina (Superior)
                     </h3>
                     <p>
-                       Desarrollo del pensamiento analítico con evidencias, estudios y análisis bioquímico.
-                    </p>
-                    <p>
+                        Desarrollo del pensamiento analítico con evidencias, estudios y análisis bioquímico.
                         Desarrollo del pensamiento crítico en la búsqueda de patrones de enfermedad. 
-                    </p>
-                    <p>
                         Rigor del estudio científico aplicado a la salud.
                     </p>
                 </div>
-                <div>
+                <div class="card">
                     <h3>
                         Salesianos Alameda - Titulación (Media y básica)
                     </h3>
@@ -248,25 +255,27 @@
             </div>
             
             <div id="certificados" class="seccion">
-                <h2>✅ Cursos y Certificados</h2>
-                <dl>
-                    <dt>Santander Open Academy</dt>
-                    <dd>Certificado de Python</dd>
+                <div class="title card">
+                    <h2>✅ Cursos y Certificados</h2>
+                </div>
+                <div class="card">
+                    <dl>
+                        <dt>Santander Open Academy</dt>
+                        <dd>Certificado de Python</dd>
 
-                    <dt>EF SET - LinkedIn</dt>
-                    <dd>Certificado de nivel de Inglés</dd>
+                        <dt>EF SET - LinkedIn</dt>
+                        <dd>Certificado de nivel de Inglés</dd>
 
-                    <dt>Microsoft - VS Code</dt>
-                    <dd>Curso introducción al desarrollo web</dd>
-                </dl>
+                        <dt>Microsoft - VS Code</dt>
+                        <dd>Curso introducción al desarrollo web</dd>
+                    </dl>
+                </div>
             </div>
         </section>
-
     </main>
-
     <footer class="seccion">
         <p>Desarrollado y mantenido por <a href="https://cuackzoide.github.io">Cuackzoide</a> | &copy; 2025</p>
     </footer>
-
+    <script src="script.js"></script>
 </body>
 </html>
