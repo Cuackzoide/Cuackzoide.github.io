@@ -74,6 +74,9 @@ nav a:hover {
     box-shadow: 1px 1px 1px 1px darkblue;
     text-decoration: none;
 }
+h2 {
+    text-align: center;
+}
 #proyectos,
 #habilidades,
 #rol-relevante,
@@ -81,6 +84,7 @@ nav a:hover {
 #educacion,
 #certificados {
     display: flex;
+    flex-direction: column;
 }
 .not-view {
     display:none
