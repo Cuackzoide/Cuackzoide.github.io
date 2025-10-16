@@ -37,12 +37,14 @@ a:hover {
     box-shadow: 2px 2px 15px darkcyan;
 }
 .card {
+    flex-grow: 1;
     margin: 1%;
     padding: 1%;
     border: 1px solid azure;
     border-radius: 0.5em;
     box-shadow: 1px 1px 5px darkslateblue;
     justify-content: space-between;
+    transition: flex-basis 1s ease;
 }
 .card:hover {
     box-shadow: 1px 1px 5px darkcyan;
@@ -80,6 +82,6 @@ nav a:hover {
 #certificados {
     display: flex;
 }
-title {
-    width: 100%;
+.not-view {
+    display:none
 }
