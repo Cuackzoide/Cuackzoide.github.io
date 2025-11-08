@@ -1,288 +1,858 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cuackzoide</title>
-    <link rel="stylesheet" href="style.css"> 
-</head>
-<body>
-    <header id="contacto" class="super-seccion">
-        <h1>Oliver Barra Acevedo <br> "Cuackzoide"</h1>
-        <p>Desarrollador Web Full-Stack en formación</p>
-        <nav class="datos-contacto">
-            <a href="mailto:Barraoliver94@gmail.com">✉️ e-Mail</a>
-            <a href="https://www.linkedin.com/in/oliver-barra-a55a8a29a/" target="_blank">🔗 LinkedIn</a>
-            <a href="https://github.com/Cuackzoide/" target="_blank">🐙 GitHub</a>
-        </nav>        
-    </header>
-
-    <main class="contenedor-cv">
-        <section id="perfil-profesional" class="super-seccion">
-            <h2 class="title">📄 Perfil Profesional</h2>
-            <p>Profesional en transición al desarrollo web con la especialización “Full-Stack JavaScript”,
-            destacando siempre un fuerte pensamiento crítico, lógico y orientado a resultados. 
-            Mi proactividad se valida con proyectos autónomos como la implementación de soluciones de automatización, 
-            consiguiendo incluso promociones internas. Poseo una sólida base de rigor metodológico y disciplina analítica,                 adquirida a través de experiencias como Analista de Datos, estudios superiores y electivos de ciencias. 
-            Busco un rol que permita capitalizar éstas habilidades en el desarrollo de soluciones tecnológicas.</p> 
-        </section>
-        
-        <section id="proyectos" class="seccion">
-            <div class="title card">
-                <h2>🚀 Proyectos</h2>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portafolio Oliver Barra</title>
+    <!-- Estilos personalizados y de Bootstrap -->
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navbar de ancho completo y sticky
+     con logo y dropdown menu -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+      <a class="navbar-brand" href="https://cuackzoide.github.io/">
+        <img
+          src="./assets/img/duck-shape-icon-vector.jpg"
+          alt="avatar"
+          width="50"
+          class="d-inline-block align-text-center rounded-circle"
+        />
+        <span class="badge-2">Oliver Barra - Web Developer</span>
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        class="collapse navbar-collapse justify-content-end"
+        id="navbarNavDropdown"
+      >
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="https://github.com/cuackzoide"
+              >🐙Github</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link text-white"
+              href="https://www.linkedin.com/in/oliver-barra-a55a8a29a/"
+              >🔗 LinkedIn</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="mailto:barraoliver94@gmail.com"
+              >✉️ e-Mail</a
+            >
+          </li>
+          <!-- Dropdown para navegación -->
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link text-white dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              🧭 Navegación
+            </a>
+            <div
+              class="dropdown-menu bg-primary"
+              aria-labelledby="navbarDropdownMenuLink"
+            >
+              <a class="dropdown-item text-light" href="#perfil">😊perfil</a>
+              <a class="dropdown-item text-light" href="#proyectos"
+                >🚀Proyectos</a
+              >
+              <a class="dropdown-item text-light" href="#experiencia"
+                >💼Experiencia</a
+              >
+              <a class="dropdown-item text-light" href="#formacion"
+                >🎓Formación</a
+              >
+              <a class="dropdown-item text-light" href="#contacto"
+                >📋Contacto</a
+              >
             </div>
-            <div class="not-view">
-            <article class="card">
-                <h3>Desafío de lógica "Mastermind”</h3>
-                <p>
-                    La fase inicial centrada en la lógica, diseñando el algoritmo de código secreto (función random de Python) y creando funciones de 
-                    comparación de arrays con estructuras condicionales para el feedback (contadores blancos/negros) y la validación de fin de juego (Victoria/Derrota).
-                </p>
-                <p>
-                    Posteriormente, la lógica core se migró a JS para el desarrollo web. Se implementó la interfaz con HTML/CSS y 
-                    se gestionó la interacción del usuario (DOM Manipulation), añadiendo funcionalidades más avanzadas como selector de dificultad y botones para la gestión de estado de la UI.
-                </p>
-                <p>
-                    Repositorio: 
-                    <a href="https://github.com/Cuackzoide/Mastermind" target="_blank">GitHub</a> 
-                    | Demo: 
-                    <a href="https://cuackzoide.github.io/Mastermind" target="_blank">Github Pages</a>
-                </p>
-            </article>
-            <article class="card">
-                <h3>E-commerce B2C</h3>
-                <p>
-                    Plataforma sobre Hosting dedicado, utilizando WordPress como CMS y WooCommerce para la funcionalidad de compras. 
-                    Se manejó gestión de dominio (NIC.CL), configuración DNS y servicio de WebMail.
-                </p>
-                <p>
-                    Se implementó pasarela de pagos local Transbank (Webpay Plus/Oneclick) mediante su API/SDK, asegurando la seguridad de las transacciones. 
-                    El trabajo incluyó la normalización de inventario con sistema SKU, diseñado para escalada con ERP/WMS. 
-                    A nivel de front-end, se personalizó la plantilla base, optimizando la UI/UX con CSS y JS.
-                </p>
-                <p>
-                    El proyecto finalizó con pruebas funcionales (QA) de rendimiento, navegación, checkout, BBDD y las automatizaciones del email. 
-                    También se incluyó la sincronización de RR.SS. El cliente se mostró altamente satisfecho con la calidad del producto entregado.
-                </p>
-            </article>
-            </div>
-        </section>
-
-        <section id="habilidades" class="seccion">
-            <div class="title card">
-                <h2>Habilidades 🛠️</h2>
-            </div>
-        <div class="not-view">
-            <div id="habilidades-tecnicas" class="habilidad card">
-                <h3>⚙️ Habilidades Técnicas</h3>
-                <dl id="tecnicas">
-                    <dt>Análisis de datos:</dt>
-                    <dd>Grandes volúmenes de datos con precisión y eficiencia.</dd>
-                    
-                    <dt>Automatización:</dt>
-                    <dd>Integración de servicios como Macros / Excel y Apps Script / Gmail / Sheets.</dd>
-
-                    <dt>Programación:</dt>
-                    <dd>Pensamiento lógico aplicado en lenguajes de alta demanda como JS, Py y JAVA.</dd>
-                    
-                    <dt>Desarrollo Web:</dt>
-                    <dd>Conocimiento de HTML, CSS y JS. Construcción de sitios web con gestión de CMS.</dd>
-                    
-                    <dt>Frameworks:</dt>
-                    <dd>Estudiando activamente frameworks de alta demanda como React y Express.</dd>
-                    
-                    <dt>Inglés - C2:</dt>
-                    <dd>Alto nivel comunicacional, posibilidad de entablar conversaciones sin problemas</dd>
-                </dl>
-            </div>
-            <div id="habilidades-blandas" class="habilidad card">
-                <h3>💡 Habilidades Blandas</h3>
-                <dl id="blandas">
-                    <dt>Adaptabilidad:</dt>
-                    <dd>Aprendizaje continuo y ágil.</dd>
-
-                    <dt>Lógica:</dt>
-                    <dd>Pensamiento algorítmico y secuencial.</dd>
-
-                    <dt>Data-Driven:</dt>
-                    <dd>Analítico y orientado a resultados.</dd>
-
-                    <dt>Proactivo:</dt>
-                    <dd>Autogestión de proyectos freelance.</dd>
-
-                    <dt>Efectividad:</dt>
-                    <dd>Comunicación técnica y estratégica.</dd>
-                </dl>
-            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Sección de perfil -->
+    <header class="container my-5">
+      <div
+        class="row p-4 pb-0 pe-lg-0 pt-lg-5 justify-content-center align-items-center shadow-lg"
+      >
+        <div id="perfil" class="col-12 d-flex">
+          <h1
+            class="display-4 fw-bold text-body-emphasis col-12 text-center pb-3"
+          >
+            😊 Mi Perfil
+          </h1>
         </div>
-        </section>
-        <section id="experiencia" class="super-seccion">
-            <article id="rol-relevante" class="seccion">
-                <div class="title card">
-                    <h2>💼 Experiencia Laboral</h2>
-                </div>
-            <div class="not-view">
-                <div class="card">
-                    <h3>
-                        GEA INTERNACIONAL — Analista de Datos + Automatización.
-                    </h3>
-                    <p>
-                        Automatización y Programación: Desarrollo de soluciones de automatización utilizando programación 
-                        funcional en Excel (VBA/macros) para optimizar el reporting y la gestión de bases de datos.
-                    </p>
-                    <p>
-                        Análisis de Datos: Administración de las bases de datos, enfocado en la optimización y la generación de informes ejecutivos para la jefatura.
-                    </p>
-                    <p>
-                        Gestión en Tiempo Real (GTR): Monitoreo constante de métricas clave para la toma responsable de decisiones.
-                    </p>
-                </div>
-                <div class="card">
-                    <h3>
-                        GEA INTERNACIONAL — Ejecutivo de atención comercial + Retención.
-                    </h3>
-                    <p>
-                        Manejo de Sistemas: propios del cliente (CLARO-VTR) como la Plataforma CRM, 
-                        discadores y plantillas, para la resolución integral de solicitudes e incidencias.
-                    </p>
-                    <p>
-                        Promoción interna: Al trasladar la lógica de descuentos del CRM a Excel, automatizando cálculos, 
-                        previniendo el error humano y mejorando significativamente la eficiencia del equipo de retención.
-                    </p>
-                </div>
-                <div class="card">
-                    <h3>
-                        KOE Chile — Ejecutivo de televentas + Matrículas.
-                    </h3>
-                    <p>
-                        Manejo de sistemas: Discador y CRM propios del empleador para la gestión de ventas, el contacto, 
-                        la captación y el cierre de matrículas de nuevos alumnos.
-                    </p>
-                </div>
-                <div class="card">
-                    <h3>
-                        Mailinko y cia. LTDA — Analista contable + Administrativo.
-                    </h3>
-                    <p>
-                        Integridad de Datos: Responsable de la trazabilidad de asistencias, inventarios, y las transacciones de compra/venta/facturación.
-                    </p>
-                    <p>
-                        Soporte Contable: Mantenimiento de la base de datos para la elaboración de balances contables y soporte a la auditoría interna.
-                    </p>
-                </div>
-            </div>
+        <div class="col-4 p-0">
+          <img
+            class="img-fluid rounded-pill"
+            src="./assets/img/avatar-ia-oliver.jpg"
+            alt="avatar de oliver generado con IA"
+          />
+        </div>
+        <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+          <p class="lead">
+            En transición al desarrollo web “Full-Stack JavaScript”, he
+            desarrollado mi pensamiento lógico y orientado a resultados con
+            experiencias en Análisis de Datos y estudios científicos. <br />
+            Siempre proactivo con proyectos web y automatizaciones personales,
+            buscando un rol que me permita capitalizar éstas habilidades en el
+            desarrollo de soluciones tecnológicas.
+          </p>
+          <div
+            class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3"
+          >
+            <!-- Botón para obtener CV -->
+            <button
+              type="button"
+              class="btn btn-primary btn-lg px-4 me-md-4 fw-bold"
+            >
+              <a
+                class="text-decoration-none text-white"
+                href="https://drive.google.com/file/d/1s_gdA7BtM_re5COAwEziWSygOF0StHDB/view?usp=sharing"
+                >Obtener CV</a
+              >
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Diseño de secciones en una columna -->
+    <main>
+      <!-- Seccion de proyectos con 2 cards -->
+      <section class="container my-5">
+        <div
+          class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center border shadow-lg"
+        >
+          <h1
+            id="proyectos"
+            class="display-4 fw-bold text-body-emphasis col-12 text-center pb-3"
+          >
+            🚀 Proyectos web
+          </h1>
+          <div class="col-lg-6 p-2">
+            <article class="card">
+              <div class="card-body">
+                <h5 class="card-title">🎮 Mastermind</h5>
+                <p class="card-text">
+                  Este proyecto representa la digitalización del juego de lógica
+                  "Mastermind" desde un algoritmo inicial en Python a una
+                  interfaz web interactiva desarrollada con HTML, CSS, y
+                  JavaScript.
+                </p>
+                <a
+                  target="_blank"
+                  href="https://cuackzoide.github.io/Mastermind"
+                  class="btn btn-primary"
+                  >Demo</a
+                >
+              </div>
             </article>
-            <article id="otros-roles" class="seccion">
-                <div class="title card">
-                    <h2>⏳ Experiencias Previas</h2>
-                </div>
-            <div class="not-view">
-                <div class="card">
-                    <h4>
-                       Cencosud — Servicio al cliente.
-                    </h4>
-                    <p>
-                       Resolución de conflictos, manejo de sistemas transaccionales (devoluciones y créditos).
-                    </p>
-                </div>
-                <div class="card">
-                    <h4>
-                        Pacific Blue — Operario de producción.
-                    </h4>
-                    <p>
-                       Adherencia a protocolos logísticos de producción y calidad.
-                    </p>
-                </div>
-                <div class="card">
-                    <h4>
-                        A Pedir De Boca — Montaje y garzón.
-                    </h4>
-                    <p>
-                       Apoyo logístico, en la planificación y ejecución de eventos con orientación al servicio.
-                    </p>
-                </div>
-                <div class="card">
-                    <h4>
-                        Yogurt Life — Cajero.
-                    </h4>
-                    <p>
-                       Responsabilidad transaccional en el manejo y cierre de caja, demostrando rigor matemático y financiero.
-                    </p>
-                </div>
-                <div class="card">
-                    <h4>
-                        OZEFE Ingeniería — Asistente de montaje.
-                    </h4>
-                    <p>
-                       Capacidad para seguir instrucciones técnicas en apoyo a procesos de manufactura.
-                    </p>
-                </div>
+          </div>
+          <div class="col-lg-6 p-2">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">🕹️ Sorteo</h5>
+                <p class="card-text">
+                  El objetivo de esta aplicación (Sortear un peluche de mi hija
+                  😅) es demostrar la manipulación dinámica del DOM y el manejo
+                  de la persistencia de datos en el lado del cliente.
+                </p>
+                <a
+                  target="_blank"
+                  href="https://cuackzoide.github.io/Sorteo"
+                  class="btn btn-primary"
+                  >Demo</a
+                >
+              </div>
             </div>
-            </article>
-        </section>
-
-        <section id="formacion" class="super-seccion">
-            <div id="educacion" class="seccion">
-                <div class="title card">    
-                    <h2>🎓 Educación</h2>
+          </div>
+        </div>
+      </section>
+      <!-- Seccion de experiencia laboral contenido dinamico con tabs-->
+      <section class="container my-5">
+        <div
+          class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center border rounded-3 shadow-lg"
+        >
+          <h1
+            id="experiencia"
+            class="display-4 fw-bold text-body-emphasis col-12 text-center pb-3"
+          >
+            💼 Experiencias Laborales
+          </h1>
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                id="analisis-tab"
+                data-toggle="tab"
+                href="#analisis"
+                role="tab"
+                aria-controls="analisis"
+                aria-selected="true"
+                >Analisis</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                id="retencion-tab"
+                data-toggle="tab"
+                href="#retencion"
+                role="tab"
+                aria-controls="retencion"
+                aria-selected="false"
+                >Retencion</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                id="contabilidad-tab"
+                data-toggle="tab"
+                href="#contabilidad"
+                role="tab"
+                aria-controls="contabilidad"
+                aria-selected="false"
+                >Contabilidad</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                id="SAC-tab"
+                data-toggle="tab"
+                href="#SAC"
+                role="tab"
+                aria-controls="SAC"
+                aria-selected="true"
+                >SAC</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                id="operario-tab"
+                data-toggle="tab"
+                href="#operario"
+                role="tab"
+                aria-controls="operario"
+                aria-selected="false"
+                >Operario</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                id="pyme-tab"
+                data-toggle="tab"
+                href="#pyme"
+                role="tab"
+                aria-controls="pyme"
+                aria-selected="false"
+                >PYME</a
+              >
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div
+              class="tab-pane fade show active"
+              id="analisis"
+              role="tabpanel"
+              aria-labelledby="analisis-tab"
+            >
+              <div class="card mb-3">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img
+                      src="./assets/img/analisis-de-datos-laptop-con-graficos.webp"
+                      class="img-fluid"
+                      alt="laptop con graficos"
+                    />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Analista de datos</h5>
+                      <p class="card-text">
+                        Administración de bases de datos, desarrollo de reportes
+                        y automatizaciones en Excel avanzado (VBA), monitoreo de
+                        métricas clave para la toma de decisiones
+                        administrativas.
+                      </p>
+                      <p class="card-text">
+                        <small class="text-body-secondary"
+                          >GEA Internacional - 2024</small
+                        >
+                      </p>
+                    </div>
+                  </div>
                 </div>
-            <div class="not-view">
-                <div class="card">
-                    <h3>
-                        MindHub — Desarrollo web (Técnico)
-                    </h3>
-                    <p>
-                        BECA SENCE - TALENTO DIGITAL: Esta iniciativa busca capacitar en carreras tecnológicas 
-                        de alta demanda, entregando más habilidades y oportunidades para la reinserción laboral.
-                    </p>
-                    <p>
-                        CURSO: Desarrollo de Aplicaciones Full-Stack JavaScript.
-                    </p>
-                </div>
-                <div class="card">
-                    <h3>
-                        Universidad San Sebastián — Medicina (Superior)
-                    </h3>
-                    <p>
-                        Desarrollo del pensamiento analítico con evidencias, estudios y análisis bioquímico.
-                        Desarrollo del pensamiento crítico en la búsqueda de patrones de enfermedad. 
-                        Rigor del estudio científico aplicado a la salud.
-                    </p>
-                </div>
-                <div class="card">
-                    <h3>
-                        Salesianos Alameda - Titulación (Media y básica)
-                    </h3>
-                    <p>
-                        Manteniendo un alto rendimiento en colegio de gran trayectoria, demostrando gran capacidad de aprendizaje y 
-                        disciplina académica, fortaleciendo el razonamiento lógico - analítico con electivos de matemáticas y ciencias.
-                    </p>
-                </div>
-            </div>    
+              </div>
             </div>
-            
-            <div id="certificados" class="seccion">
-                <div class="title card">
-                    <h2>✅ Cursos y Certificados</h2>
+            <div
+              class="tab-pane fade"
+              id="retencion"
+              role="tabpanel"
+              aria-labelledby="retencion-tab"
+            >
+              <div class="card mb-3">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img
+                      src="./assets/img/ejecutivo-retencion-llamada-laptop-callcenter.webp"
+                      class="img-fluid"
+                      alt="Ejecutivo de retención callcenter en llamada con laptop"
+                    />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Ejecutivo de retención</h5>
+                      <p class="card-text">
+                        Manejo de Sistemas como plataforma CRM, discadores y
+                        plantillas del cliente (Claro-VTR), para la resolución
+                        integral de solicitudes e incidencias.
+                      </p>
+                      <p class="card-text">
+                        <small class="text-body-secondary"
+                          >GEA Internacional - 2024</small
+                        >
+                      </p>
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">Ejecutivo de matriculas</h5>
+                      <p class="card-text">
+                        Manejo de sistemas como CRM, discadores y plantillas del
+                        empleador para la gestión de ventas, el contacto, la
+                        captación y el cierre de matrículas de nuevos alumnos.
+                      </p>
+                      <p class="card-text">
+                        <small class="text-body-secondary"
+                          >KOE fast & easy capacitación para Chile- 2022</small
+                        >
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                <div class="card not-view">
-                    <dl>
-                        <dt>Santander Open Academy</dt>
-                        <dd>Certificado de Python</dd>
-
-                        <dt>EF SET - LinkedIn</dt>
-                        <dd>Certificado de nivel de Inglés</dd>
-
-                        <dt>Microsoft - VS Code</dt>
-                        <dd>Curso introducción al desarrollo web</dd>
-                    </dl>
-                </div>
+              </div>
             </div>
-        </section>
+            <div
+              class="tab-pane fade"
+              id="contabilidad"
+              role="tabpanel"
+              aria-labelledby="contabilidad-tab"
+            >
+              <div class="card mb-3">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img
+                      src="./assets/img/contabilidad-analisis-balances-caja.jpg"
+                      class="img-fluid"
+                      alt="Analista de contabilidad"
+                    />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Analista de contabilidad</h5>
+                      <p class="card-text">
+                        Manejo de las bases de datos de inventarios,
+                        transacciones de compra-venta y facturación para la
+                        elaboración de balances contables y soporte a la
+                        auditoría interna.
+                      </p>
+                      <p class="card-text">
+                        <small class="text-body-secondary"
+                          >Mailinko y Cia LTDA - 2022</small
+                        >
+                      </p>
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">Responsable de caja y cierres</h5>
+                      <p class="card-text">
+                        Manejo de caja con responsabilidad en apertura,
+                        transacciones y cierre, con cuadraturas y rendición de
+                        cuentas a la central mediante depositos.
+                      </p>
+                      <p class="card-text">
+                        <small class="text-body-secondary"
+                          >Yogurt Life SA - 2013</small
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="SAC"
+              role="tabpanel"
+              aria-labelledby="SAC-tab"
+            >
+              <div class="card mb-3">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img
+                      src="./assets/img/SAC-servicios-atencion-al-cliente.jpg"
+                      class="img-fluid"
+                      alt="Atencion a clientes saludo cordial"
+                    />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">
+                        Ejecutivo de atención al cliente
+                      </h5>
+                      <p class="card-text">
+                        Atención de consultas o solicitudes de los clientes,
+                        resolución de conflictos y manejo de sistemas
+                        transaccionales (devoluciones - créditos).
+                      </p>
+                      <p class="card-text">
+                        <small class="text-body-secondary"
+                          >Santa Isabel SA - 2020</small
+                        >
+                      </p>
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">
+                        Garzón y asistente de montaje en eventos
+                      </h5>
+                      <p class="card-text">
+                        Apoyo logístico, en la planificación y ejecución de
+                        eventos con orientación al servicio para eventos
+                        formales de gran escala.
+                      </p>
+                      <p class="card-text">
+                        <small class="text-body-secondary"
+                          >A Pedir De Boca SPA - 2016</small
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="operario"
+              role="tabpanel"
+              aria-labelledby="operario-tab"
+            >
+              <div class="card mb-3">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img
+                      src="./assets/img/operario-asistente-produccion-industial.jpg"
+                      class="img-fluid"
+                      alt="Operario de producción industrial con medidas de protección sonriente"
+                    />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Operario de producción</h5>
+                      <p class="card-text">
+                        Adherencia a protocolos logísticos de producción y
+                        calidad en importante empresa del rubro pesquero en la
+                        región.
+                      </p>
+                      <p class="card-text">
+                        <small class="text-body-secondary"
+                          >Pacific Blue SpA - 2017</small
+                        >
+                      </p>
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">Asistente de montaje</h5>
+                      <p class="card-text">
+                        Capacidad para seguir instrucciones técnicas, apoyo en
+                        procesos de manufactura de estructuras metálicas para
+                        fines industriales, agricolas y tratamiento de agua.
+                      </p>
+                      <p class="card-text">
+                        <small class="text-body-secondary"
+                          >OZEFE ingenieria y servicios LTDA.</small
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="pyme"
+              role="tabpanel"
+              aria-labelledby="pyme-tab"
+            >
+              <div class="card mb-3">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img
+                      src="./assets/img/pyme-emprendimiento-inventario-logistica.webp"
+                      class="img-fluid"
+                      alt="Pareja planifica inventario de emprendimiento pyme"
+                    />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">E-commerce B2C</h5>
+                      <p class="card-text">
+                        Cree la plataforma sobre Hosting dedicado con WordPress
+                        como CMS y WooCommerce con integración SDK Transbank
+                        para las compras. Se incluyó sistema SKU para control de
+                        inventario. Integración sWebmail y RR.SS. vinculadas
+                        para servicio al cliente y marketing.
+                      </p>
+                      <p class="card-text">
+                        <small class="text-body-secondary"
+                          >El negocio se abandonó por altos costos de
+                          importación en Chile.</small
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Sección de formación académica contenido dinamico con tabs -->
+      <section class="container my-5">
+        <div
+          class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center border rounded-3 shadow-lg"
+        >
+          <h1
+            id="formacion"
+            class="display-4 fw-bold text-body-emphasis col-12 text-center pb-3"
+          >
+            🎓 Formación Academica
+          </h1>
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                id="tecnico-tab"
+                data-toggle="tab"
+                href="#tecnico"
+                role="tab"
+                aria-controls="tecnico"
+                aria-selected="true"
+                >Técnico</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                id="cursos-tab"
+                data-toggle="tab"
+                href="#cursos"
+                role="tab"
+                aria-controls="cursos"
+                aria-selected="false"
+                >Cursos</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                id="superior-tab"
+                data-toggle="tab"
+                href="#superior"
+                role="tab"
+                aria-controls="superior"
+                aria-selected="false"
+                >Superior</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                id="secundaria-tab"
+                data-toggle="tab"
+                href="#secundaria"
+                role="tab"
+                aria-controls="secundaria"
+                aria-selected="true"
+                >Secundaria</a
+              >
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div
+              class="tab-pane fade show active"
+              id="tecnico"
+              role="tabpanel"
+              aria-labelledby="tecnico-tab"
+            >
+              <div class="card mb-3">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img
+                      src="./assets/img/editor-codigo-js-pantalla.jpg"
+                      class="img-fluid"
+                      alt="pantalla negra con codigo javascript de colores"
+                    />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Beca "Talento digital"</h5>
+                      <p class="card-text">
+                        Curso "Desarrollo de Aplicaciones Full-Stack
+                        JavaScript", diseñado para formar las habilidades
+                        necesarias para construir y mantener software en
+                        lenguaje Javascript y frameworks basados en Javascript,
+                        crear aplicaciones web full stack Javascript y operar
+                        una base de datos para almacenamiento.
+                      </p>
+                      <p class="card-text">
+                        <small class="text-body-secondary"
+                          >MindHub web + SENCE - 2025</small
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="cursos"
+              role="tabpanel"
+              aria-labelledby="cursos-tab"
+            >
+              <div class="card mb-3">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img
+                      src="./assets/img/cursos-online-microsoft.png"
+                      class="img-fluid"
+                      alt="Animacion escritorio con laptop haciendo click sobre boton play"
+                    />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Cursos y certificados online</h5>
+                      <p class="card-text">
+                        <a
+                          target="_blank"
+                          href="https://vscodeedu.com/courses/intro-to-web-dev"
+                          >Introducción al Desarrollo Web
+                        </a>
+                        <small class="text-body-secondary">
+                          Microsoft VS Code</small
+                        >
+                      </p>
+                      <p class="card-text">
+                        <a
+                          target="_blank"
+                          href="https://vscodeedu.com/courses/intro-to-python"
+                          >Introducción a python
+                        </a>
+                        <small class="text-body-secondary">
+                          Microsoft VS Code</small
+                        >
+                      </p>
+                      <p class="card-text">
+                        <a
+                          target="_blank"
+                          href="https://drive.google.com/file/d/1u0vMDozoalp5hj7bucQyizfH1gKl_GhC/view"
+                          >Certificado de python
+                        </a>
+                        <small class="text-body-secondary">
+                          Santander Open Academy</small
+                        >
+                      </p>
+                      <p class="card-text">
+                        <a
+                          target="_blank"
+                          href="
+                        https://cert.efset.org/en/wgoUXX"
+                          >Certificado de Ingles - C2
+                        </a>
+                        <small class="text-body-secondary">
+                          EF Set English Certificate - 2025</small
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="superior"
+              role="tabpanel"
+              aria-labelledby="superior-tab"
+            >
+              <div class="card mb-3">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img
+                      src="./assets/img/doctor-medico-cirujano-joven-uniforme.jpg"
+                      class="img-fluid"
+                      alt="Medico joven sonriente con su uniforme de trabajo"
+                    />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Medicina y cirugia general</h5>
+                      <p class="card-text">
+                        Demostrando el rigor en los estudios, ingresé a la
+                        carrera más exigente del area de la salud. <br />
+                        Desarrollando aún más el pensamiento crítico y analítico
+                        en la búsqueda de patrones de enfermedad con evidencias,
+                        estudios y análisis bioquímico. <br />
+                        No finalizado por motivos personales durante la pandemia
+                        de 2019.
+                      </p>
+                      <p class="card-text">
+                        <small class="text-body-secondary"
+                          >Universidad San Sebastián, Sede Concepción -
+                          2014</small
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="secundaria"
+              role="tabpanel"
+              aria-labelledby="secundaria-tab"
+            >
+              <div class="card mb-3">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img
+                      src="./assets/img/secundaria-logo-colegio-salesianos-alameda-santiago.jpg"
+                      class="img-fluid img-card rounded-start"
+                      alt="Logo colegio salesianos alameda Santiago Chile"
+                    />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Ttitulación de educación media</h5>
+                      <p class="card-text">
+                        Manteniendo un alto rendimiento en colegio de gran
+                        trayectoria, demostrando mi capacidad de aprendizaje y
+                        disciplina académica. <br />
+                        Fortaleciendo mi razonamiento lógico - analítico con
+                        electivos de matemáticas y ciencias.
+                      </p>
+                      <p class="card-text">
+                        <small class="text-body-secondary"
+                          >Salesianos Alameda - 2012</small
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Sección de Formulario de contacto HTML-->
+      <section class="container my-5">
+        <div
+          class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center border rounded-3 shadow-lg"
+        >
+          <h1
+            id="contacto"
+            class="display-4 fw-bold text-body-emphasis col-12 text-center pb-3"
+          >
+            📋 Formulario de contacto
+          </h1>
+          <form class="col-12" action="#" method="post">
+            <div class="mb-3">
+              <label for="name" class="form-label">Nombre</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                required
+                placeholder="nombre"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Correo electrónico</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                required
+                placeholder="email@ejemplo.com"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Mensaje</label>
+              <textarea
+                class="form-control"
+                id="message"
+                rows="3"
+                required
+                placeholder="Escribe tu mensaje y te contestaré a la brevedad"
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </form>
+        </div>
+      </section>
     </main>
-    <footer class="seccion">
-        <p>Desarrollado y mantenido por <a href="https://cuackzoide.github.io">Cuackzoide</a> | &copy; 2025</p>
+    <!-- Pie de página fijo de ancho completo-->
+    <footer
+      class="container-fluid d-flex justify-content-center bg-primary text-light p-4"
+    >
+      <a class="footer-brand" href="https://cuackzoide.github.io/">
+        <img
+          src="./assets/img/duck-shape-icon-vector.jpg"
+          alt="avatar"
+          width="50"
+          class="d-inline-block text-center rounded-circle"
+        />
+        <span class="badge-1 text-light"
+          >&copy; 2024 Cuackzoide, all rights reserved.</span
+        >
+      </a>
     </footer>
-    <script src="script.js"></script>
-</body>
+    <!-- Scripts de Bootstrap -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
